@@ -9,47 +9,84 @@ body{
 font-family: Arial;
 margin:0;
 background:#f4f6f9;
+color:#222;
 }
 
+/* HEADER */
 header{
-background:#1a1a2e;
+background:#0a192f;
 color:white;
-padding:40px;
+padding:50px;
 text-align:center;
 }
 
+header h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.highlight{
+color:#64ffda;
+}
+
+/* SECTIONS */
 section{
 max-width:1000px;
 margin:auto;
 padding:40px;
 background:white;
 margin-top:20px;
-border-radius:8px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* HEADINGS */
 h2{
-color:#1a1a2e;
-border-bottom:2px solid #ddd;
-padding-bottom:10px;
+color:#0a192f;
+border-left:5px solid #0077cc;
+padding-left:10px;
 }
 
+/* PROJECT CARDS */
 .project{
 margin-bottom:20px;
 padding:15px;
-background:#f7f7f7;
+background:#eef6ff;
 border-left:5px solid #0077cc;
+border-radius:5px;
+transition:0.3s;
 }
 
+.project:hover{
+transform:scale(1.02);
+background:#dbeeff;
+}
+
+/* SKILLS GRID */
 .skills{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:10px;
 }
 
+/* LINKS */
+a{
+color:#0077cc;
+text-decoration:none;
+font-weight:bold;
+}
+
+a:hover{
+color:#64ffda;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-color:#555;
+background:#0a192f;
+color:white;
+margin-top:20px;
 }
 
 </style>
@@ -60,7 +97,7 @@ color:#555;
 
 <header>
 <h1>Enoch Benher Kutagula</h1>
-<p>Aerospace Engineering Graduate Student | Aircraft Systems | Structural Analysis</p>
+<p class="highlight">Aerospace Engineering | Aircraft Systems | Structural Analysis</p>
 <p>Ames, Iowa | +1 515-441-0334 | benherenoch.be@gmail.com</p>
 </header>
 
@@ -73,7 +110,7 @@ color:#555;
 I am a graduate student in Aerospace Engineering at Iowa State University with a strong
 background in aircraft systems, maintenance operations, structural analysis, and aerospace
 design. My academic and practical experiences include aircraft inspections, maintenance
-procedures, aerodynamic analysis, and simulation-based engineering. 
+procedures, aerodynamic analysis, and simulation-based engineering.
 </p>
 
 <p>
@@ -140,6 +177,38 @@ development, and aviation safety engineering.
 
 <section>
 
+<h2>Certifications</h2>
+
+<div class="project">
+<b>Fundamentals of Airport Operations</b>
+<p>Certification covering airport infrastructure, operations management, and aviation safety protocols.</p>
+</div>
+
+<div class="project">
+<b>Rocket and Exploration</b>
+<p>Introduction to space exploration concepts, rocket systems, and aerospace technologies.</p>
+</div>
+
+<div class="project">
+<b>Maribat-Allegra – Negotiations</b>
+<p>Professional training focused on negotiation strategies and decision-making.</p>
+</div>
+
+<div class="project">
+<b>Move – Leadership Performance</b>
+<p>Course focused on leadership, communication, and performance improvement.</p>
+</div>
+
+<div class="project">
+<b>Personality Development Course</b>
+<p>Focused on communication skills, personal growth, and professional development.</p>
+</div>
+
+</section>
+
+
+<section>
+
 <h2>Education</h2>
 
 <p>
@@ -154,20 +223,6 @@ National Aviation University, Kyiv, Ukraine<br>
 2019 – 2023
 </p>
 
-<section>
-
-<section>
-
-<h2>Certifications</h2>
-
-<ul>
-<li>Fundamentals of Airport Operations</li>
-<li>Personality Development Course</li>
-<li>Rocket and Exploration</li>
-<li>Maribat-Allegra – Negotiations</li>
-<li>Move – Leadership Performance</li>
-</ul>
-
 </section>
 
 
@@ -176,71 +231,33 @@ National Aviation University, Kyiv, Ukraine<br>
 <h2>Academic Projects</h2>
 
 <div class="project">
-
 <b>Preliminary Aircraft Design – Boeing 777 Concept</b>
-
-<p>
-Designed a wide-body aircraft concept capable of carrying 500 passengers over
-an 8,000 km range. Conducted aerodynamic calculations, structural analysis,
-engine selection studies, and performance estimation.
-</p>
-
+<p>Designed a 500-passenger, 8,000 km range aircraft. Performed aerodynamic and structural analysis, engine selection, and performance estimation.</p>
 </div>
 
 <div class="project">
-
-<b>Aircraft & Engine Familiarization Practice</b>
-
-<p>
-Studied the systems and design of Tu-154, An-26, Yak-40, and Boeing 777 aircraft.
-Developed understanding of aircraft maintenance procedures and powerplant
-fundamentals.
-</p>
-
+<b>Aircraft & Engine Familiarization</b>
+<p>Studied systems of Tu-154, An-26, Yak-40, and Boeing 777. Learned maintenance and powerplant fundamentals.</p>
 </div>
 
 <div class="project">
-
 <b>Operational & Manufacturing Practice</b>
-
-<p>
-Performed aircraft inspections, maintenance tasks, and landing gear servicing.
-Gained practical exposure to both Soviet and Western aircraft systems.
-</p>
-
+<p>Performed inspections, maintenance tasks, and landing gear servicing on aircraft systems.</p>
 </div>
 
 <div class="project">
-
 <b>Helicopter Systems Study</b>
-
-<p>
-Analyzed Mi-series and Western rotorcraft configurations using FAA–H8083-21B.
-Compared rotor system architectures and evaluated safety considerations.
-</p>
-
+<p>Analyzed rotorcraft systems and safety aspects using FAA guidelines.</p>
 </div>
 
 <div class="project">
-
-<b>Aircraft in Forest Fire Fighting Research</b>
-
-<p>
-Studied Antonov and Ilyushin firefighting aircraft and evaluated aviation
-strategies used in wildfire suppression operations.
-</p>
-
+<b>Aircraft Firefighting Research</b>
+<p>Studied Antonov and Ilyushin aircraft used in wildfire suppression operations.</p>
 </div>
 
 <div class="project">
-
-<b>Boeing 777 Development & Certification Study</b>
-
-<p>
-Analyzed aircraft development lifecycle and studied FAA certification
-process including flight testing procedures exceeding 4,600 flight hours.
-</p>
-
+<b>Boeing 777 Certification Study</b>
+<p>Analyzed aircraft development lifecycle and FAA certification process.</p>
 </div>
 
 </section>
@@ -253,31 +270,16 @@ process including flight testing procedures exceeding 4,600 flight hours.
 <p><b>Back-End Support Associate — Bolt</b> (2019–2020)</p>
 <ul>
 <li>Supported backend operational processes and issue resolution.</li>
-<li>Coordinated service operations and technical support tasks.</li>
 </ul>
 
 <p><b>Chat Support Associate — Uber</b> (2020–2021)</p>
 <ul>
-<li>Provided real-time customer support and troubleshooting assistance.</li>
-<li>Handled high-volume service inquiries efficiently.</li>
+<li>Provided real-time customer support and troubleshooting.</li>
 </ul>
 
 <p><b>Delivery Partner — Swiggy</b> (2017–2018)</p>
 <ul>
-<li>Managed time-sensitive logistics and delivery coordination.</li>
-<li>Developed strong time management and operational discipline.</li>
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Volunteer Experience</h2>
-
-<ul>
-<li>Participated in community service initiatives through church and university activities.</li>
-<li>Assisted in aviation-related university events and student programs.</li>
+<li>Managed logistics and time-sensitive deliveries.</li>
 </ul>
 
 </section>
