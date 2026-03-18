@@ -3,107 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enoch Benher | Portfolio</title>
+<title>Enoch Benher Kutagula | Portfolio</title>
 
 <style>
-html{scroll-behavior:smooth;}
+html { scroll-behavior: smooth; }
 
-body{
-font-family:Arial;
-margin:0;
-background:#0a192f;
-color:#222;
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+color: #222;
+background:
+linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.9)),
+url('https://images.unsplash.com/photo-1542296332-2e4473faf563');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
 }
 
 /* NAV */
-nav{
-background:#0a192f;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
+nav {
+background: #0a192f;
+padding: 15px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 999;
 }
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
+nav a {
+color: white;
+margin: 10px;
+text-decoration: none;
+font-weight: bold;
 }
-nav a:hover{color:#64ffda;}
+nav a:hover { color: #64ffda; }
 
 /* HEADER */
-header{
-text-align:center;
-padding:60px 20px;
-color:white;
+header {
+background: #0a192f;
+color: white;
+padding: 50px 20px;
+text-align: center;
 }
-.highlight{color:#64ffda;}
+.highlight { color: #64ffda; }
 
-/* SECTION */
-section{
-max-width:1000px;
-margin:30px auto;
-padding:30px;
-background:white;
-border-radius:10px;
+/* SECTIONS */
+section {
+max-width: 1000px;
+margin: 20px auto;
+padding: 40px;
+background: rgba(255,255,255,0.95);
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* HEADINGS */
-h2{
-border-left:5px solid #64ffda;
-padding-left:10px;
+h2 {
+padding-left: 10px;
+border-left: 5px solid #64ffda;
+margin-top: 0;
 }
 
 /* CARDS */
-.card{
-background:#f4f8ff;
-padding:15px;
-margin:10px 0;
-border-left:5px solid #0077cc;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
+.card {
+margin-bottom: 20px;
+padding: 20px;
+background: #eef6ff;
+border-left: 5px solid #0077cc;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s;
 }
-.card:hover{background:#e3f0ff;}
+.card:hover {
+background: #dbeeff;
+transform: scale(1.01);
+}
+
+/* SKILLS */
+.skills {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 20px;
+}
 
 /* BUTTON */
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:8px 14px;
-background:#0077cc;
-color:white;
-border-radius:5px;
-text-decoration:none;
+.btn {
+display: inline-block;
+margin-top: 12px;
+padding: 10px 16px;
+background: #0077cc;
+color: white;
+border-radius: 6px;
+text-decoration: none;
 }
-.btn:hover{background:#64ffda;color:#0a192f;}
+.btn:hover {
+background: #64ffda;
+color: #0a192f;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 20px;
+background: #0a192f;
+color: white;
+}
 
 /* MODAL */
-.modal{
-display:none;
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.8);
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
 }
-.modal-content{
-background:white;
-margin:5% auto;
-padding:20px;
-width:90%;
-max-width:600px;
-border-radius:10px;
-text-align:center;
+.modal-content {
+background: white;
+margin: 5% auto;
+padding: 20px;
+width: 90%;
+max-width: 700px;
+border-radius: 10px;
+text-align: center;
+position: relative;
 }
-.modal img{
-width:100%;
-border-radius:10px;
+.modal img {
+width: 100%;
+border-radius: 10px;
+margin-top: 10px;
 }
-.close{
-float:right;
-font-size:25px;
-cursor:pointer;
-color:red;
+.close {
+position: absolute;
+right: 15px;
+top: 10px;
+font-size: 25px;
+cursor: pointer;
+color: red;
+}
+
+@media(max-width:768px){
+.skills { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -113,6 +154,7 @@ color:red;
 <!-- NAV -->
 <nav>
 <a href="#about">About</a>
+<a href="#skills">Skills</a>
 <a href="#certifications">Certifications</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
@@ -129,16 +171,43 @@ color:red;
 <section id="about">
 <h2>About Me</h2>
 <p>
-Graduate student at Iowa State University with experience in Aerospace Engineering and Cybersecurity.
-Focused on aircraft systems, propulsion, and real-world engineering applications.
+Graduate student at Iowa State University with expertise in Aerospace Engineering and Cybersecurity.
+Strong background in aircraft systems, propulsion, and real-world engineering applications.
 </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Technical Skills</h2>
+
+<div class="skills">
+<div>
+<b>Aerospace</b>
+<ul>
+<li>Aircraft Maintenance</li>
+<li>MRO Operations</li>
+<li>Safety Protocols</li>
+<li>Powerplant Systems</li>
+</ul>
+</div>
+
+<div>
+<b>Engineering Tools</b>
+<ul>
+<li>MATLAB</li>
+<li>AutoCAD</li>
+<li>Simulation</li>
+<li>Structural Analysis</li>
+</ul>
+</div>
+</div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
 <h2>Certifications</h2>
 
-<div class="card" onclick="openModal('c1')">Fundamentals of Airport Operations</div>
+<div class="card" onclick="openModal('c1')">Airport Operations</div>
 <div class="card" onclick="openModal('c2')">Rocket & Exploration</div>
 <div class="card" onclick="openModal('c3')">Negotiations</div>
 <div class="card" onclick="openModal('c4')">Leadership Performance</div>
@@ -153,12 +222,12 @@ Focused on aircraft systems, propulsion, and real-world engineering applications
 
 <div class="card">
 <b>Boeing 777 Aircraft Design</b><br>
-Aircraft systems analysis and structural design project.
+Aircraft structural and system analysis
 </div>
 
 <div class="card">
 <b>Cybersecurity IAM Automation</b><br>
-Automated identity provisioning using Python & SailPoint.
+Python-based identity provisioning system
 </div>
 
 </section>
@@ -167,17 +236,15 @@ Automated identity provisioning using Python & SailPoint.
 <section id="contact">
 <h2>Contact</h2>
 <p>Email: benherenoch.be@gmail.com</p>
-<a href="https://www.linkedin.com/in/enoch-benher-be" class="btn" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/enoch-benher-be" target="_blank" class="btn">LinkedIn</a>
 </section>
 
-<!-- FOOTER -->
-<footer style="text-align:center;color:white;padding:20px;">
-© 2026 Enoch Benher
+<footer>
+© 2026 Enoch Benher Kutagula
 </footer>
 
 <!-- MODALS -->
 
-<!-- AIRPORT -->
 <div id="c1" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c1')">&times;</span>
@@ -186,7 +253,6 @@ Automated identity provisioning using Python & SailPoint.
 </div>
 </div>
 
-<!-- ROCKET -->
 <div id="c2" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c2')">&times;</span>
@@ -195,7 +261,6 @@ Automated identity provisioning using Python & SailPoint.
 </div>
 </div>
 
-<!-- NEGOTIATION -->
 <div id="c3" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c3')">&times;</span>
@@ -204,7 +269,6 @@ Automated identity provisioning using Python & SailPoint.
 </div>
 </div>
 
-<!-- LEADERSHIP -->
 <div id="c4" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c4')">&times;</span>
@@ -213,7 +277,6 @@ Automated identity provisioning using Python & SailPoint.
 </div>
 </div>
 
-<!-- AIRCRAFT -->
 <div id="c5" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c5')">&times;</span>
@@ -222,7 +285,6 @@ Automated identity provisioning using Python & SailPoint.
 </div>
 </div>
 
-<!-- GOOGLE -->
 <div id="c6" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal('c6')">&times;</span>
