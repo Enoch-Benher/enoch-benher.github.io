@@ -1,414 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enoch Benher Kutagula | Aerospace Engineering Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enoch Benher Kutagula | Aerospace Engineering Portfolio</title>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: #222;
-      background:
-        linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9)),
-        url('https://images.unsplash.com/photo-1542296332-2e4473faf563');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
+html { scroll-behavior: smooth; }
 
-    /* NAVBAR */
-    nav {
-      background: #0a192f;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+body{
+font-family: Arial;
+margin:0;
+color:#222;
+background:
+linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.9)),
+url('https://images.unsplash.com/photo-1542296332-2e4473faf563');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
 
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
+/* NAVBAR */
+nav{
+background:#0a192f;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
 
-    nav a:hover {
-      color: #64ffda;
-    }
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    /* HEADER */
-    header {
-      background: #0a192f;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
+nav a:hover{ color:#64ffda; }
 
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
+/* HEADER */
+header{
+background:#0a192f;
+color:white;
+padding:50px;
+text-align:center;
+}
 
-    .highlight {
-      color: #64ffda;
-      font-weight: bold;
-    }
+.highlight{ color:#64ffda; }
 
-    /* SECTIONS */
-    section {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+/* SECTIONS */
+section{
+max-width:1000px;
+margin:20px auto;
+padding:40px;
+background: rgba(255,255,255,0.95);
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
 
-    /* HEADINGS */
-    h2 {
-      padding-left: 10px;
-      border-left: 5px solid;
-      margin-top: 0;
-    }
+/* HEADINGS */
+h2{
+padding-left:10px;
+border-left:5px solid;
+margin-top:0;
+}
 
-    #about h2 {
-      color: #64ffda;
-      border-color: #64ffda;
-    }
+#about h2{ color:#64ffda; border-color:#64ffda; }
+#skills h2{ color:#ff6b6b; border-color:#ff6b6b; }
+#certifications h2{ color:#f7b731; border-color:#f7b731; }
+#projects h2{ color:#00a8ff; border-color:#00a8ff; }
+#contact h2{ color:#9c88ff; border-color:#9c88ff; }
 
-    #skills h2 {
-      color: #ff6b6b;
-      border-color: #ff6b6b;
-    }
+/* CARDS */
+.project{
+margin-bottom:20px;
+padding:20px;
+background:#eef6ff;
+border-left:5px solid #0077cc;
+border-radius:8px;
+cursor:pointer;
+}
 
-    #certifications h2 {
-      color: #f7b731;
-      border-color: #f7b731;
-    }
+.project:hover{
+background:#dbeeff;
+}
 
-    #projects h2 {
-      color: #00a8ff;
-      border-color: #00a8ff;
-    }
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:12px;
+padding:10px 16px;
+background:#0077cc;
+color:white;
+border-radius:6px;
+text-decoration:none;
+}
 
-    #contact h2 {
-      color: #9c88ff;
-      border-color: #9c88ff;
-    }
+.btn:hover{
+background:#64ffda;
+color:#0a192f;
+}
 
-    /* PROJECT / CERT CARDS */
-    .project {
-      margin-bottom: 20px;
-      padding: 20px;
-      background: #eef6ff;
-      border-left: 5px solid #0077cc;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#0a192f;
+color:white;
+}
 
-    .project:hover {
-      transform: scale(1.01);
-      background: #dbeeff;
-    }
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+}
 
-    .clickable {
-      cursor: pointer;
-    }
+.modal-content{
+background:white;
+margin:5% auto;
+padding:20px;
+width:90%;
+max-width:700px;
+border-radius:10px;
+text-align:center;
+}
 
-    /* SKILLS GRID */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+.modal img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
 
-    /* LINKS */
-    a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.close{
+position:absolute;
+right:20px;
+top:10px;
+font-size:30px;
+cursor:pointer;
+color:red;
+}
 
-    a:hover {
-      color: #64ffda;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      background: #0077cc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #64ffda;
-      color: #0a192f;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a192f;
-      color: white;
-      margin-top: 20px;
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 30px 15px;
-      box-sizing: border-box;
-    }
-
-    .modal-content {
-      background: white;
-      margin: 30px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 750px;
-      border-radius: 10px;
-      text-align: center;
-      position: relative;
-    }
-
-    .modal-content p {
-      margin: 8px 0;
-      line-height: 1.5;
-    }
-
-    .modal img {
-      width: 100%;
-      max-width: 650px;
-      border-radius: 10px;
-      margin-top: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .close {
-      position: absolute;
-      right: 18px;
-      top: 10px;
-      font-size: 30px;
-      cursor: pointer;
-      color: red;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-      .skills {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 28px;
-      }
-
-      section {
-        padding: 25px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Enoch Benher Kutagula</h1>
-    <p class="highlight">Aerospace Engineering | Aircraft Systems | Structural Analysis</p>
-    <p>Ames, Iowa | +1 515-441-0334 | benherenoch.be@gmail.com</p>
-  </header>
+<header>
+<h1>Enoch Benher Kutagula</h1>
+<p class="highlight">Aerospace Engineering | Aircraft Systems | Structural Analysis</p>
+<p>Ames, Iowa | +1 515-441-0334 | benherenoch.be@gmail.com</p>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a graduate student in Aerospace Engineering at Iowa State University with a strong
-      background in aircraft systems, maintenance operations, structural analysis, and aerospace design.
-    </p>
-    <p>
-      I hold a Bachelor’s degree in Aircraft Maintenance and Repair from the National Aviation
-      University in Kyiv, Ukraine.
-    </p>
-  </section>
+<section id="about">
+<h2>About Me</h2>
+<p>I am a graduate student in Aerospace Engineering at Iowa State University.</p>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
+<section id="skills">
+<h2>Technical Skills</h2>
+<ul>
+<li>Aircraft Maintenance</li>
+<li>MATLAB</li>
+<li>AutoCAD</li>
+</ul>
+</section>
 
-    <div class="skills">
-      <div>
-        <b>Aircraft & Aerospace Systems</b>
-        <ul>
-          <li>Aircraft Maintenance (Line & Base)</li>
-          <li>MRO Operations</li>
-          <li>Aircraft Inspections</li>
-          <li>Landing Gear Servicing</li>
-          <li>Powerplant Fundamentals</li>
-          <li>Aviation Safety Protocols</li>
-        </ul>
-      </div>
+<section id="certifications">
+<h2>Certifications</h2>
 
-      <div>
-        <b>Engineering Tools</b>
-        <ul>
-          <li>MATLAB</li>
-          <li>AutoCAD</li>
-          <li>CAD Structural Analysis</li>
-          <li>Aerodynamic Analysis</li>
-          <li>Simulation & Modeling</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="project" onclick="openModal('cert1')">
+<b>Fundamentals of Airport Operations</b>
+</div>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <h2>Certifications</h2>
+<div class="project" onclick="openModal('cert2')">
+<b>Rocket and Exploration</b>
+</div>
 
-    <div class="project clickable" onclick="openModal('cert1')">
-      <b>Fundamentals of Airport Operations</b><br>
-      <a href="javascript:void(0)">View Certificate</a>
-    </div>
+<div class="project" onclick="openModal('cert3')">
+<b>Negotiations Certification</b>
+</div>
 
-    <div class="project clickable" onclick="openModal('cert2')">
-      <b>Rocket and Exploration</b><br>
-      <a href="javascript:void(0)">View Certificate</a>
-    </div>
+</section>
 
-    <div class="project clickable" onclick="openModal('cert3')">
-      <b>Negotiations Certification</b><br>
-      <a href="javascript:void(0)">View Certificate</a>
-    </div>
-  </section>
+<section id="projects">
+<h2>Academic Projects</h2>
+<div class="project"><b>Boeing 777 Aircraft Design</b></div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Academic Projects</h2>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: benherenoch.be@gmail.com</p>
+</section>
 
-    <div class="project">
-      <b>Boeing 777 Aircraft Design</b>
-    </div>
+<footer>
+© 2026 Enoch Benher Kutagula
+</footer>
 
-    <div class="project">
-      <b>Helicopter Systems Study</b>
-    </div>
-  </section>
+<!-- MODALS -->
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: benherenoch.be@gmail.com</p>
-    <p>Phone: +1 515-441-0334</p>
-  </section>
+<div id="cert1" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('cert1')">&times;</span>
+<h2>Fundamentals of Airport Operations</h2>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Enoch Benher Kutagula
-  </footer>
+<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
+View on LinkedIn
+</a>
 
-  <!-- MODAL 1 -->
-  <div id="cert1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('cert1')">&times;</span>
-      <h2 style="color:#0a192f; border:none; padding-left:0;">Fundamentals of Airport Operations</h2>
-      <p><b>Certificate Type:</b> Professional Certification</p>
-      <p><b>Verification:</b> LiveCase Certificate Link</p>
+</div>
+</div>
 
-      <a href="https://www.livecase.com/certificate/67bd0291a8a3adb2c83738f3" target="_blank" class="btn">
-        🔗 View Official Certificate
-      </a>
-    </div>
-  </div>
+<div id="cert2" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('cert2')">&times;</span>
+<h2>Rocket and Exploration</h2>
 
-  <!-- MODAL 2 -->
-  <div id="cert2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('cert2')">&times;</span>
-      <h2 style="color:#0a192f; border:none; padding-left:0;">Rocket and Exploration</h2>
+<img src="Enoch_Benher.png">
 
-      <p><b>Organization:</b> OmSpace Rocket and Exploration Pvt. Ltd.</p>
-      <p><b>Issued:</b> July 2024</p>
-      <p><b>Credential ID:</b> OSRE/INT/06-2024/025</p>
-      <p><b>Skills:</b> Rocket Technology · Propulsion · OpenRocket</p>
+<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
+View on LinkedIn
+</a>
 
-      <img src="Enoch_Benher.png" alt="Rocket and Exploration Certificate">
+</div>
+</div>
 
-      <br>
+<div id="cert3" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('cert3')">&times;</span>
+<h2>Negotiations Certification</h2>
 
-      <a href="https://www.livecase.com/certificate/67bd0291a8a3adb2c83738f3" target="_blank" class="btn">
-        🔗 View Official Certificate
-      </a>
-    </div>
-  </div>
+<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
+View on LinkedIn
+</a>
 
-  <!-- MODAL 3 -->
-  <div id="cert3" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('cert3')">&times;</span>
-      <h2 style="color:#0a192f; border:none; padding-left:0;">Negotiations Certification</h2>
+</div>
+</div>
 
-      <p><b>Issued:</b> 2024</p>
-      <p>
-        This certification focuses on negotiation strategies, decision-making,
-        and effective communication in professional environments.
-      </p>
-
-      <a href="https://www.livecase.com/certificate/67bd02911a6198e6f97ef016" target="_blank" class="btn">
-        🔗 View Official Certificate
-      </a>
-    </div>
-  </div>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      const modals = document.getElementsByClassName("modal");
-      for (let i = 0; i < modals.length; i++) {
-        if (event.target === modals[i]) {
-          modals[i].style.display = "none";
-        }
-      }
-    };
-  </script>
+<script>
+function openModal(id){
+document.getElementById(id).style.display="block";
+}
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+</script>
 
 </body>
 </html>
