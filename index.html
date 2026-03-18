@@ -6,22 +6,19 @@
 <title>Enoch Benher Kutagula | Aerospace Engineering Portfolio</title>
 
 <style>
-
-html { scroll-behavior: smooth; }
+html{scroll-behavior:smooth;}
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 color:#222;
-background:
-linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.9)),
+background:linear-gradient(rgba(10,25,47,0.85),rgba(10,25,47,0.9)),
 url('https://images.unsplash.com/photo-1542296332-2e4473faf563');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+background-size:cover;
+background-attachment:fixed;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 background:#0a192f;
 padding:15px;
@@ -29,15 +26,13 @@ text-align:center;
 position:sticky;
 top:0;
 }
-
 nav a{
 color:white;
 margin:10px;
 text-decoration:none;
 font-weight:bold;
 }
-
-nav a:hover{ color:#64ffda; }
+nav a:hover{color:#64ffda;}
 
 /* HEADER */
 header{
@@ -46,15 +41,14 @@ color:white;
 padding:50px;
 text-align:center;
 }
-
-.highlight{ color:#64ffda; }
+.highlight{color:#64ffda;}
 
 /* SECTIONS */
 section{
 max-width:1000px;
 margin:20px auto;
 padding:40px;
-background: rgba(255,255,255,0.95);
+background:rgba(255,255,255,0.95);
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
@@ -63,65 +57,39 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 h2{
 padding-left:10px;
 border-left:5px solid;
-margin-top:0;
 }
-
-#about h2{ color:#64ffda; border-color:#64ffda; }
-#skills h2{ color:#ff6b6b; border-color:#ff6b6b; }
-#certifications h2{ color:#f7b731; border-color:#f7b731; }
-#projects h2{ color:#00a8ff; border-color:#00a8ff; }
-#contact h2{ color:#9c88ff; border-color:#9c88ff; }
+#certifications h2{color:#f7b731;border-color:#f7b731;}
+#projects h2{color:#00a8ff;border-color:#00a8ff;}
 
 /* CARDS */
 .project{
-margin-bottom:20px;
 padding:20px;
+margin-bottom:15px;
 background:#eef6ff;
 border-left:5px solid #0077cc;
 border-radius:8px;
 cursor:pointer;
 }
+.project:hover{background:#dbeeff;}
 
-.project:hover{
-background:#dbeeff;
-}
-
-/* BUTTON */
 .btn{
 display:inline-block;
-margin-top:12px;
-padding:10px 16px;
+margin-top:10px;
+padding:10px;
 background:#0077cc;
 color:white;
 border-radius:6px;
-text-decoration:none;
 }
-
-.btn:hover{
-background:#64ffda;
-color:#0a192f;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#0a192f;
-color:white;
-}
+.btn:hover{background:#64ffda;color:#0a192f;}
 
 /* MODAL */
 .modal{
 display:none;
 position:fixed;
-z-index:1000;
-left:0;
-top:0;
-width:100%;
-height:100%;
+top:0;left:0;
+width:100%;height:100%;
 background:rgba(0,0,0,0.8);
 }
-
 .modal-content{
 background:white;
 margin:5% auto;
@@ -131,133 +99,107 @@ max-width:700px;
 border-radius:10px;
 text-align:center;
 }
-
 .modal img{
 width:100%;
 border-radius:10px;
-margin-top:10px;
 }
-
 .close{
-position:absolute;
-right:20px;
-top:10px;
-font-size:30px;
+float:right;
+font-size:25px;
 cursor:pointer;
 color:red;
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
 <a href="#certifications">Certifications</a>
 <a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
 </nav>
 
 <header>
 <h1>Enoch Benher Kutagula</h1>
-<p class="highlight">Aerospace Engineering | Aircraft Systems | Structural Analysis</p>
-<p>Ames, Iowa | +1 515-441-0334 | benherenoch.be@gmail.com</p>
+<p class="highlight">Aerospace Engineering</p>
 </header>
-
-<section id="about">
-<h2>About Me</h2>
-<p>I am a graduate student in Aerospace Engineering at Iowa State University.</p>
-</section>
-
-<section id="skills">
-<h2>Technical Skills</h2>
-<ul>
-<li>Aircraft Maintenance</li>
-<li>MATLAB</li>
-<li>AutoCAD</li>
-</ul>
-</section>
 
 <section id="certifications">
 <h2>Certifications</h2>
 
-<div class="project" onclick="openModal('cert1')">
-<b>Fundamentals of Airport Operations</b>
-</div>
-
-<div class="project" onclick="openModal('cert2')">
-<b>Rocket and Exploration</b>
-</div>
-
-<div class="project" onclick="openModal('cert3')">
-<b>Negotiations Certification</b>
-</div>
+<div class="project" onclick="openModal('c1')">Airport Operations</div>
+<div class="project" onclick="openModal('c2')">Rocket & Exploration</div>
+<div class="project" onclick="openModal('c3')">Negotiations</div>
+<div class="project" onclick="openModal('c4')">Leadership Performance</div>
+<div class="project" onclick="openModal('c5')">Aircraft Fundamentals</div>
+<div class="project" onclick="openModal('c6')">Google Analytics</div>
 
 </section>
 
-<section id="projects">
-<h2>Academic Projects</h2>
-<div class="project"><b>Boeing 777 Aircraft Design</b></div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: benherenoch.be@gmail.com</p>
-</section>
-
-<footer>
-© 2026 Enoch Benher Kutagula
-</footer>
+<footer>© 2026 Enoch</footer>
 
 <!-- MODALS -->
 
-<div id="cert1" class="modal">
+<!-- AIRPORT -->
+<div id="c1" class="modal">
 <div class="modal-content">
-<span class="close" onclick="closeModal('cert1')">&times;</span>
-<h2>Fundamentals of Airport Operations</h2>
-
-<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
-View on LinkedIn
-</a>
-
+<span class="close" onclick="closeModal('c1')">&times;</span>
+<h2>Airport Operations</h2>
+<p>Udemy | Issued Feb 2024</p>
+<a href="https://www.udemy.com/certificate/UC-12373a3d-91dc-41e8-9743-4f7d00840b36/" target="_blank" class="btn">View Certificate</a>
 </div>
 </div>
 
-<div id="cert2" class="modal">
+<!-- ROCKET -->
+<div id="c2" class="modal">
 <div class="modal-content">
-<span class="close" onclick="closeModal('cert2')">&times;</span>
-<h2>Rocket and Exploration</h2>
-
+<span class="close" onclick="closeModal('c2')">&times;</span>
+<h2>Rocket & Exploration</h2>
+<p>OmSpace | July 2024</p>
+<p>ID: OSRE/INT/06-2024/025</p>
 <img src="Enoch_Benher.png">
-
-<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
-View on LinkedIn
-</a>
-
 </div>
 </div>
 
-<div id="cert3" class="modal">
+<!-- NEGOTIATION -->
+<div id="c3" class="modal">
 <div class="modal-content">
-<span class="close" onclick="closeModal('cert3')">&times;</span>
-<h2>Negotiations Certification</h2>
+<span class="close" onclick="closeModal('c3')">&times;</span>
+<h2>Negotiations</h2>
+<a href="https://www.livecase.com/certificate/67bd02911a6198e6f97ef016" target="_blank" class="btn">View Certificate</a>
+</div>
+</div>
 
-<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">
-View on LinkedIn
-</a>
+<!-- LEADERSHIP -->
+<div id="c4" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('c4')">&times;</span>
+<h2>Leadership Performance</h2>
+<a href="https://www.livecase.com/certificate/67bd0291a8a3adb2c83738f3" target="_blank" class="btn">View Certificate</a>
+</div>
+</div>
 
+<!-- AIRCRAFT -->
+<div id="c5" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('c5')">&times;</span>
+<h2>Aircraft Fundamentals</h2>
+<a href="https://www.udemy.com/certificate/UC-52cab15b-a802-4ca6-8a5b-e1ca86d8eacb/" target="_blank" class="btn">View Certificate</a>
+</div>
+</div>
+
+<!-- GOOGLE -->
+<div id="c6" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('c6')">&times;</span>
+<h2>Google Analytics</h2>
+<a href="https://www.linkedin.com/in/enoch-benher-be/details/certifications/" target="_blank" class="btn">View Certificate</a>
 </div>
 </div>
 
 <script>
-function openModal(id){
-document.getElementById(id).style.display="block";
-}
-function closeModal(id){
-document.getElementById(id).style.display="none";
-}
+function openModal(id){document.getElementById(id).style.display="block";}
+function closeModal(id){document.getElementById(id).style.display="none";}
 </script>
 
 </body>
