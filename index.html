@@ -5,11 +5,33 @@
 
 <style>
 
+html {
+scroll-behavior: smooth;
+}
+
 body{
 font-family: Arial;
 margin:0;
 background:#f4f6f9;
 color:#222;
+}
+
+/* NAVBAR */
+nav{
+background:#0a192f;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#64ffda;
 }
 
 /* HEADER */
@@ -95,6 +117,15 @@ margin-top:20px;
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
 <h1>Enoch Benher Kutagula</h1>
 <p class="highlight">Aerospace Engineering | Aircraft Systems | Structural Analysis</p>
@@ -102,28 +133,24 @@ margin-top:20px;
 </header>
 
 
-<section>
-
+<section id="about">
 <h2>About Me</h2>
 
 <p>
 I am a graduate student in Aerospace Engineering at Iowa State University with a strong
 background in aircraft systems, maintenance operations, structural analysis, and aerospace
-design. My academic and practical experiences include aircraft inspections, maintenance
-procedures, aerodynamic analysis, and simulation-based engineering.
+design.
 </p>
 
 <p>
 I hold a Bachelor’s degree in Aircraft Maintenance and Repair from the National Aviation
-University in Kyiv, Ukraine. My interests include aircraft design, aerospace systems
-development, and aviation safety engineering.
+University in Kyiv, Ukraine.
 </p>
 
 </section>
 
 
-<section>
-
+<section id="skills">
 <h2>Technical Skills</h2>
 
 <div class="skills">
@@ -151,147 +178,48 @@ development, and aviation safety engineering.
 </ul>
 </div>
 
-<div>
-<b>Programming</b>
-<ul>
-<li>Python (Anaconda)</li>
-<li>LaTeX (Overleaf)</li>
-<li>Microsoft Excel</li>
-<li>Microsoft Office</li>
-</ul>
-</div>
-
-<div>
-<b>Certifications</b>
-<ul>
-<li>Airport Operations</li>
-<li>Aircraft Fundamentals</li>
-<li>Space Technology</li>
-</ul>
-</div>
-
 </div>
 
 </section>
 
 
-<section>
-
+<section id="certifications">
 <h2>Certifications</h2>
 
 <div class="project">
 <b>Fundamentals of Airport Operations</b>
-<p>Certification covering airport infrastructure, operations management, and aviation safety protocols.</p>
 </div>
 
 <div class="project">
 <b>Rocket and Exploration</b>
-<p>Introduction to space exploration concepts, rocket systems, and aerospace technologies.</p>
 </div>
 
 <div class="project">
-<b>Maribat-Allegra – Negotiations</b>
-<p>Professional training focused on negotiation strategies and decision-making.</p>
-</div>
-
-<div class="project">
-<b>Move – Leadership Performance</b>
-<p>Course focused on leadership, communication, and performance improvement.</p>
-</div>
-
-<div class="project">
-<b>Personality Development Course</b>
-<p>Focused on communication skills, personal growth, and professional development.</p>
+<b>Negotiations Certification</b>
 </div>
 
 </section>
 
 
-<section>
-
-<h2>Education</h2>
-
-<p>
-<b>Master of Science in Aerospace Engineering</b><br>
-Iowa State University, Ames, Iowa<br>
-Expected Graduation: December 2026
-</p>
-
-<p>
-<b>Bachelor of Science in Aircraft Maintenance and Repair</b><br>
-National Aviation University, Kyiv, Ukraine<br>
-2019 – 2023
-</p>
-
-</section>
-
-
-<section>
-
+<section id="projects">
 <h2>Academic Projects</h2>
 
 <div class="project">
-<b>Preliminary Aircraft Design – Boeing 777 Concept</b>
-<p>Designed a 500-passenger, 8,000 km range aircraft. Performed aerodynamic and structural analysis, engine selection, and performance estimation.</p>
-</div>
-
-<div class="project">
-<b>Aircraft & Engine Familiarization</b>
-<p>Studied systems of Tu-154, An-26, Yak-40, and Boeing 777. Learned maintenance and powerplant fundamentals.</p>
-</div>
-
-<div class="project">
-<b>Operational & Manufacturing Practice</b>
-<p>Performed inspections, maintenance tasks, and landing gear servicing on aircraft systems.</p>
+<b>Boeing 777 Aircraft Design</b>
 </div>
 
 <div class="project">
 <b>Helicopter Systems Study</b>
-<p>Analyzed rotorcraft systems and safety aspects using FAA guidelines.</p>
-</div>
-
-<div class="project">
-<b>Aircraft Firefighting Research</b>
-<p>Studied Antonov and Ilyushin aircraft used in wildfire suppression operations.</p>
-</div>
-
-<div class="project">
-<b>Boeing 777 Certification Study</b>
-<p>Analyzed aircraft development lifecycle and FAA certification process.</p>
 </div>
 
 </section>
 
 
-<section>
-
-<h2>Professional Experience</h2>
-
-<p><b>Back-End Support Associate — Bolt</b> (2019–2020)</p>
-<ul>
-<li>Supported backend operational processes and issue resolution.</li>
-</ul>
-
-<p><b>Chat Support Associate — Uber</b> (2020–2021)</p>
-<ul>
-<li>Provided real-time customer support and troubleshooting.</li>
-</ul>
-
-<p><b>Delivery Partner — Swiggy</b> (2017–2018)</p>
-<ul>
-<li>Managed logistics and time-sensitive deliveries.</li>
-</ul>
-
-</section>
-
-
-<section>
-
+<section id="contact">
 <h2>Contact</h2>
 
 <p>Email: benherenoch.be@gmail.com</p>
 <p>Phone: +1 515-441-0334</p>
-<p>Location: Ames, Iowa, USA</p>
 
 </section>
 
