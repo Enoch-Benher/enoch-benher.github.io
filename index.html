@@ -285,12 +285,9 @@ View Certificate
   
 </div>
 
-<div class="project">
-<b>Negotiations Certification</b><br>
-
-<a href="https://www.livecase.com/certificate/67bd02911a6198e6f97ef016>
-View Certificate
-</a>
+<div class="project" onclick="openModal('cert3')">
+<b>Negotiations Certification</b>
+</div>
 
 </div>
 
@@ -323,6 +320,49 @@ View Certificate
 <footer>
 © 2026 Enoch Benher Kutagula
 </footer>
+
+<!-- 👇 ADD MODALS HERE -->
+
+<div id="cert3" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('cert3')">&times;</span>
+
+<h2 style="color:#0a192f;">Negotiations Certification</h2>
+
+<p><b>Issued:</b> 2024</p>
+
+<p>
+This certification focuses on negotiation strategies, decision-making,
+and effective communication in professional environments.
+</p>
+
+<a href="https://www.livecase.com/certificate/67bd02911a6198e6f97ef016" target="_blank" class="btn">
+🔗 View Official Certificate
+</a>
+
+</div>
+</div>
+
+<script>
+function openModal(id){
+document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display = "none";
+}
+</script>
+
+<footer>...</footer>
+
+<!-- MODALS -->
+<div id="cert1">...</div>
+<div id="cert2">...</div>
+<div id="cert3">...</div>
+
+<!-- SCRIPT -->
+<script>...</script>
 
 </body>
 </html>
